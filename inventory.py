@@ -7,16 +7,10 @@ class invent1:
         print(f"Code : {self.code}")
         print(f"No : {self.no}")
         print(f"Price : {self.price}")
-    def getcode(self):
-        return self.code    
-    def getno(self):
-        return self.no
-    def getprice(self):
-        return self.price
 class invent2:
     def __init__(self,x):
-        self.code=x.getcode()
-        self.total=x.getno()*x.getprice()
+        self.code=x.code
+        self.total=x.no*x.price
     def display(self):
         print(f"Total : {self.total}")
         return self.total
