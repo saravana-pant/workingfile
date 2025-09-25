@@ -21,12 +21,13 @@ class student:
     @classmethod
     def top(cls,stu,n): 
         high=0
-        name=''  
+        name=[]  
         for i in range(n):
-            if stu[i].total>high:
+            if stu[i].total>=high:
                 high=stu[i].total
-                name=stu[i].name
-        print(f"The Student with Hgihest mark Name : {name} marks obtained : {high}")
+                name.append(stu[i].name)
+        for n in name:
+            print(f"The Student with Hgihest mark Name : {n} marks obtained : {high}")
 n=int(input("Enter Number of Students :"))
 x=[i for i in range(n)]
 for i in range(n):
